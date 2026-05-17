@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios — MYR Technology</title>
+  <meta name="description" content="Servicios de MYR Technology: Desarrollo Web, Automatización, Soluciones Digitales, Integraciones y Consultoría." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Estilos específicos para la página de servicios */
+    .services-hero {
+      padding: 160px 24px 80px;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .service-block {
+      padding: 80px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .service-block:last-child {
+      border-bottom: none;
+    }
+    .service-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .service-wrapper.reverse {
+      direction: rtl;
+    }
+    .service-wrapper.reverse > * {
+      direction: ltr;
+    }
+    .service-content h2 {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    .service-intro {
+      font-size: 1.1rem;
+      color: var(--cyan);
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+    .service-desc {
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+    .service-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .service-list li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+    .service-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--blue-elec);
+      border-radius: 50%;
+    }
+    .service-visual {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 300px;
+    }
+    .service-visual svg {
+      width: 120px;
+      height: 120px;
+    }
+
+    @media (max-width: 768px) {
+      .service-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .service-wrapper.reverse {
+        direction: ltr;
+      }
+      .service-visual {
+        min-height: 200px;
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo_MYR.png" alt="MYR Technology Logo" class="nav-logo-img" />
+        <span class="nav-logo-text">MYR <span class="accent">Technology</span></span>
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="servicios.html" style="color: var(--cyan);">Soluciones</a>
+        <a href="sobre-myr.html">Sobre MYR</a>
+        <a href="index.html#contacto" class="nav-cta">Contacto</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════════ HERO SERVICIOS ══════════════ -->
+  <section class="services-hero">
+    <div class="section-tag">Nuestros Servicios</div>
+    <h1 class="hero-title">Soluciones digitales adaptadas a cada <span class="hero-gradient">proyecto</span></h1>
+    <p class="hero-desc">
+      Desarrollamos herramientas, plataformas y procesos digitales enfocados en funcionalidad, automatización y construcción tecnológica moderna.
+    </p>
+  </section>
+
+  <!-- ══════════════ DETALLE SERVICIOS ══════════════ -->
+  <section class="section pt-0" style="padding-bottom: 20px;">
+    <div class="container">
+
+      <!-- BLOQUE 1 -->
+      <article class="service-block">
+        <div class="service-wrapper">
+          <div class="service-content">
+            <h2>Desarrollo Web</h2>
+            <p class="service-intro">Diseñamos páginas web y plataformas digitales enfocadas en identidad visual, experiencia de usuario y funcionalidad.</p>
+            <p class="service-desc">Desarrollamos sitios web modernos adaptados a diferentes tipos de proyectos y necesidades. Desde landing pages hasta plataformas más completas, buscamos crear experiencias visuales limpias, funcionales y preparadas para evolucionar junto a cada marca o negocio.</p>
+            <ul class="service-list">
+              <li>Interfaces modernas</li>
+              <li>Diseño responsive</li>
+              <li>Optimización visual</li>
+              <li>Formularios</li>
+              <li>Estructura de contenido</li>
+              <li>Integración con herramientas</li>
+            </ul>
+          </div>
+          <div class="service-visual">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00D9FF" />
+                  <stop offset="100%" stop-color="#006BFF" />
+                </linearGradient>
+                <filter id="glow1" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="3" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+              <circle cx="32" cy="32" r="20" fill="url(#grad1)" opacity="0.15" filter="url(#glow1)"/>
+              <path d="M22 50h20" stroke="url(#grad1)" stroke-width="3" stroke-linecap="round"/>
+              <path d="M32 42v8" stroke="url(#grad1)" stroke-width="3" stroke-linecap="round"/>
+              <rect x="12" y="16" width="40" height="26" rx="4" fill="#0D1B36" stroke="url(#grad1)" stroke-width="3"/>
+              <path d="M12 24h40" stroke="url(#grad1)" stroke-width="3"/>
+              <circle cx="18" cy="20" r="2" fill="#00D9FF"/>
+              <circle cx="24" cy="20" r="2" fill="#006BFF"/>
+            </svg>
+          </div>
+        </div>
+      </article>
+
+      <!-- BLOQUE 2 -->
+      <article class="service-block">
+        <div class="service-wrapper reverse">
+          <div class="service-content">
+            <h2>Desarrollo de Aplicaciones</h2>
+            <p class="service-intro">Construimos aplicaciones móviles nativas y multiplataforma para conectar tu negocio directamente con los usuarios.</p>
+            <p class="service-desc">Transformamos ideas en productos móviles funcionales, interactivos y optimizados para iOS y Android. Nos aseguramos de brindar una experiencia de usuario fluida y un rendimiento excepcional en cada dispositivo.</p>
+            <ul class="service-list">
+              <li>Apps para iOS y Android</li>
+              <li>Experiencia de usuario (UX/UI)</li>
+              <li>Rendimiento optimizado</li>
+              <li>Integración con APIs</li>
+              <li>Escalabilidad</li>
+            </ul>
+          </div>
+          <div class="service-visual">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#006BFF" />
+                  <stop offset="100%" stop-color="#00D9FF" />
+                </linearGradient>
+                <filter id="glow2" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="3" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+              <circle cx="32" cy="32" r="20" fill="url(#grad2)" opacity="0.15" filter="url(#glow2)"/>
+              <rect x="20" y="12" width="24" height="40" rx="6" fill="#0D1B36" stroke="url(#grad2)" stroke-width="3"/>
+              <rect x="25" y="20" width="4" height="4" rx="1" fill="#00D9FF"/>
+              <rect x="35" y="20" width="4" height="4" rx="1" fill="#006BFF"/>
+              <rect x="25" y="28" width="4" height="4" rx="1" fill="#006BFF"/>
+              <rect x="35" y="28" width="4" height="4" rx="1" fill="#00D9FF"/>
+              <path d="M28 44h8" stroke="url(#grad2)" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </article>
+
+      <!-- BLOQUE 3 -->
+      <article class="service-block">
+        <div class="service-wrapper">
+          <div class="service-content">
+            <h2>Automatización y Procesos</h2>
+            <p class="service-intro">Automatizamos tareas y procesos digitales para optimizar tiempo y operaciones.</p>
+            <p class="service-desc">Implementamos soluciones enfocadas en simplificar procesos repetitivos, mejorar flujos de trabajo y conectar herramientas digitales de manera más eficiente. Nuestro enfoque actual está orientado a automatizaciones prácticas y funcionales, adaptadas a necesidades reales y procesos específicos.</p>
+            <ul class="service-list">
+              <li>Automatización de tareas</li>
+              <li>Conexión entre plataformas</li>
+              <li>Formularios automatizados</li>
+              <li>Respuestas automáticas</li>
+              <li>Organización de procesos</li>
+            </ul>
+          </div>
+          <div class="service-visual">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad3" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#00D9FF" />
+                  <stop offset="100%" stop-color="#006BFF" />
+                </linearGradient>
+                <filter id="glow3" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="3" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+              <circle cx="32" cy="32" r="20" fill="url(#grad3)" opacity="0.15" filter="url(#glow3)"/>
+              <circle cx="32" cy="18" r="6" fill="#0D1B36" stroke="url(#grad3)" stroke-width="3"/>
+              <circle cx="18" cy="42" r="6" fill="#0D1B36" stroke="url(#grad3)" stroke-width="3"/>
+              <circle cx="46" cy="42" r="6" fill="#0D1B36" stroke="url(#grad3)" stroke-width="3"/>
+              <path d="M28 24l-6 12" stroke="url(#grad3)" stroke-width="3" stroke-linecap="round"/>
+              <path d="M36 24l6 12" stroke="url(#grad3)" stroke-width="3" stroke-linecap="round"/>
+              <path d="M24 42h16" stroke="url(#grad3)" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 4"/>
+            </svg>
+          </div>
+        </div>
+      </article>
+
+      <!-- BLOQUE 4 -->
+      <article class="service-block">
+        <div class="service-wrapper reverse">
+          <div class="service-content">
+            <h2>Soluciones Digitales</h2>
+            <p class="service-intro">Construimos herramientas y sistemas digitales adaptados a diferentes necesidades.</p>
+            <p class="service-desc">Trabajamos en el desarrollo de plataformas, herramientas internas y proyectos digitales enfocados en resolver necesidades específicas y mejorar experiencias de uso. Exploramos constantemente nuevas ideas tecnológicas y soluciones funcionales capaces de adaptarse a distintos tipos de proyectos.</p>
+            <ul class="service-list">
+              <li>Dashboards</li>
+              <li>Sistemas internos</li>
+              <li>Plataformas digitales</li>
+              <li>Ideas SaaS</li>
+              <li>Herramientas organizacionales</li>
+              <li>Productos digitales personalizados</li>
+            </ul>
+          </div>
+          <div class="service-visual">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad4" x1="100%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#006BFF" />
+                  <stop offset="100%" stop-color="#00D9FF" />
+                </linearGradient>
+                <filter id="glow4" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="3" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+              <circle cx="32" cy="32" r="20" fill="url(#grad4)" opacity="0.15" filter="url(#glow4)"/>
+              <path d="M32 14l16 9v18l-16 9-16-9V23l16-9z" fill="#0D1B36" stroke="url(#grad4)" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M32 14v18" stroke="url(#grad4)" stroke-width="3" stroke-linecap="round"/>
+              <path d="M32 32l16-9" stroke="url(#grad4)" stroke-width="3" stroke-linecap="round"/>
+              <path d="M32 32l-16-9" stroke="url(#grad4)" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="32" cy="32" r="4" fill="#00D9FF"/>
+            </svg>
+          </div>
+        </div>
+      </article>
+
+      <!-- BLOQUE 5 -->
+      <article class="service-block">
+        <div class="service-wrapper">
+          <div class="service-content">
+            <h2>Creación de Agentes Digitales</h2>
+            <p class="service-intro">Desarrollamos asistentes virtuales avanzados y agentes autónomos impulsados por Inteligencia Artificial.</p>
+            <p class="service-desc">Diseñamos y entrenamos agentes inteligentes capaces de gestionar atención al cliente, organizar bases de datos, ejecutar flujos de trabajo complejos y tomar decisiones basadas en datos. Construimos ecosistemas donde la IA actúa como un colaborador incansable que automatiza interacciones, escala la capacidad de tu equipo y optimiza el uso de recursos operativos.</p>
+          </div>
+          <div class="service-visual">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00D9FF" />
+                  <stop offset="100%" stop-color="#006BFF" />
+                </linearGradient>
+                <filter id="glow5" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="3" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+              <circle cx="32" cy="32" r="20" fill="url(#grad5)" opacity="0.15" filter="url(#glow5)"/>
+              <rect x="20" y="24" width="24" height="20" rx="4" fill="#0D1B36" stroke="url(#grad5)" stroke-width="3"/>
+              <circle cx="26" cy="32" r="2" fill="#00D9FF"/>
+              <circle cx="38" cy="32" r="2" fill="#00D9FF"/>
+              <path d="M32 24v-6" stroke="url(#grad5)" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="32" cy="15" r="3" fill="url(#grad5)"/>
+              <path d="M20 34h-4" stroke="url(#grad5)" stroke-width="3" stroke-linecap="round"/>
+              <path d="M48 34h-4" stroke="url(#grad5)" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </article>
+
+      <!-- BLOQUE 6 -->
+      <article class="service-block">
+        <div class="service-wrapper reverse">
+          <div class="service-content">
+            <h2>Consultoría Tecnológica</h2>
+            <p class="service-intro">Acompañamos proyectos en la búsqueda de soluciones digitales y oportunidades tecnológicas.</p>
+            <p class="service-desc">Ayudamos a analizar ideas, procesos y necesidades digitales para encontrar herramientas, enfoques y soluciones más adecuadas para cada proyecto.</p>
+            <ul class="service-list">
+              <li>Adaptación tecnológica</li>
+              <li>Exploración de soluciones</li>
+              <li>Construcción de procesos digitales</li>
+              <li>Mejora operativa</li>
+              <li>Nuevas oportunidades tecnológicas</li>
+            </ul>
+          </div>
+          <div class="service-visual">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad6" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#006BFF" />
+                  <stop offset="100%" stop-color="#00D9FF" />
+                </linearGradient>
+                <filter id="glow6" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="3" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+              <circle cx="32" cy="32" r="20" fill="url(#grad6)" opacity="0.15" filter="url(#glow6)"/>
+              <circle cx="28" cy="28" r="8" fill="#0D1B36" stroke="url(#grad6)" stroke-width="3"/>
+              <path d="M34 34l8 8" stroke="url(#grad6)" stroke-width="3" stroke-linecap="round"/>
+              <path d="M46 20v16" stroke="url(#grad6)" stroke-width="3" stroke-linecap="round"/>
+              <path d="M40 26h12" stroke="url(#grad6)" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </article>
+
+      <!-- BLOQUE 7 -->
+      <article class="service-block">
+        <div class="service-wrapper">
+          <div class="service-content">
+            <h2>Proyectos Personalizados</h2>
+            <p class="service-intro">Desarrollamos soluciones adaptadas a necesidades específicas.</p>
+            <p class="service-desc">Cada proyecto tiene procesos, ideas y objetivos diferentes. Por eso trabajamos en soluciones construidas según el contexto y necesidades reales de cada caso. Desde prototipos hasta herramientas funcionales, buscamos desarrollar proyectos flexibles capaces de evolucionar y crecer con el tiempo.</p>
+          </div>
+          <div class="service-visual">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad7" x1="100%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#00D9FF" />
+                  <stop offset="100%" stop-color="#006BFF" />
+                </linearGradient>
+                <filter id="glow7" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="3" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+              <circle cx="32" cy="32" r="20" fill="url(#grad7)" opacity="0.15" filter="url(#glow7)"/>
+              <path d="M22 42l16-16 4 4-16 16-6 2 2-6z" fill="#0D1B36" stroke="url(#grad7)" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M38 26l8-8 4 4-8 8" stroke="url(#grad7)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20 20l4 4" stroke="url(#grad7)" stroke-width="3" stroke-linecap="round"/>
+              <path d="M40 44l4 4" stroke="url(#grad7)" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ══════════════ CTA FINAL ══════════════ -->
+  <section class="cta-section" id="contacto">
+    <div class="cta-bg">
+      <div class="cta-grid"></div>
+    </div>
+    <div class="container">
+      <div class="cta-content">
+        <div class="section-tag">¿Listo para comenzar?</div>
+        <h2 class="cta-title">Construyamos tu próximo<br/><span class="accent-gradient">proyecto digital</span></h2>
+        <p class="cta-desc">
+          Hablemos sobre automatización, plataformas web, herramientas digitales o nuevas ideas tecnológicas.
+        </p>
+        <a href="https://wa.me/573188749076?text=Hola%20MYR%20Technology%2C%20me%20interesa%20hablar%20sobre%20un%20proyecto%20digital." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          Escríbenos por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 2rem; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+        <div class="footer-brand" style="display: flex; align-items: center; gap: 1rem;">
+          <img src="logo_MYR.png" alt="MYR Technology" class="footer-logo" style="width: 40px; height: 40px; background: white; padding: 4px; border-radius: 4px;" />
+          <span class="footer-name" style="font-weight: 700; font-size: 1.2rem; font-family: var(--font-head);">MYR Technology</span>
+        </div>
+        <div class="footer-socials" style="display: flex; gap: 1rem;">
+          <a href="https://wa.me/573188749076" target="_blank" class="social-icon" aria-label="WhatsApp" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.05); color: var(--text); transition: all 0.3s;"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></a>
+          <a href="https://www.facebook.com/share/1B3WhjsHdQ/" class="social-icon" aria-label="Facebook" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.05); color: var(--text); transition: all 0.3s;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="mailto:myrtecnology@gmail.com" class="social-icon" aria-label="Email" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.05); color: var(--text); transition: all 0.3s;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: var(--text-muted); flex-wrap: wrap; gap: 1rem;">
+        <p class="footer-copy" style="margin: 0;">© 2026 MYR Technology. Todos los derechos reservados.</p>
+        <div class="footer-legal" style="display: flex; gap: 1.5rem;">
+          <a href="terminos.html" style="color: inherit; transition: color 0.3s;">Términos y condiciones</a>
+          <a href="privacidad.html" style="color: inherit; transition: color 0.3s;">Políticas de privacidad</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
